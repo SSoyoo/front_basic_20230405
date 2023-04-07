@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!-- form요소 -->
+    <!-- 사용자로부터 입력을 받아, 특정한 리소스로 요청을 보낼 때 사용되는 요소 -->
+    <form>
+        <input name = "id" />
+        <input name = "password" />
+        <button type ="submit">로그인</button>
+    </form>
+    <br />
+    <!--form의 속성-->
+    <!--action / method -->
+    <!--action 속성은 form을 제출할 때 어떤 리소스로 제출할 것인지 -->
+    <!--method 속성은 form을 제출할 때 어떤 방식(get,post)으로 제출할 것인지--> 
+    <!--get 방식은 데이터를 url에 담아서 전송// Request Header 의 url에 담겨서 전송 된다-->
+    <!--post방식은 데이터를 숨겨서 전송 // Request Body에 담겨서 전송-->
+
+    <form action ="http://naver.com" method="GET">        
+        <input name ="data"/>
+        <button type ="submit">get전송</button>
+    </form>
+
+    <br />
+
+    <form action ="http://naver.com" method="POST">        
+        <input name ="data"/>
+        <button type ="submit">post전송</button>
+    </form>
+
+    <br />
+    <!--form button-->
+    <form>
+        <input name ="first" />
+        <input name = "second" />
+        <!--submit :  form 을  action에 mehotd방식으로 요청을 보내는 형식, 누르면 요청을 보낸다-->
+        <button type ="submit">제출</button>
+        <input type="submit" value ="인풋제출" />
+        <!--reset : form 의 input value들을 초기값으로 변경-->
+        <button type ="reset">초기화</button>
+        <input type="reset" value="인풋초기화 " />
+    </form>
+    <br />
+    
+
+    <!--field set요소-->
+    <!--form의 field를 그룹화 지어주는 요소 -->
+    <!--Label 요소-->
+    <!--form 의 요소에 라벨을 달아주는 요소-->
+    <!-- lable요소의 for속성에 form의 요소의 id속성값을 지정하면 해당 label요소와 form의 요소가 연결된다-->
+    <form>
+        <fieldset>
+            <legend>예약정보</legend>
+            <label for = "reservation_input">예약일</label>
+             <input type ="date" id="reservation_input"/>
+            <input />
+        </fieldset>
+    
+    </form>
+
+    <!--* checkboxm radio type-->
+    <!--checkbox: 0개이상 선택할 때 사용  -->
+    <!--radio : 1개만 선택할 때 사용-->
+    <!--value: checkbox나 radio의 값을 지정-->
+    <!--name : form 제출시 해당 name으로 value전송-->
+    <!--name으로 그룹화-->
+    <!--checked: 기본적으로 선택 -->
+
+
+    <form>
+        <fieldset>
+
+            <legend>checkbox</legend>
+            <input type="checkbox" name="check_group" value="1" checked/><label>1</label>
+            <input type="checkbox" name="check_group" value="2"/><label>2</label>
+            <input type="checkbox" name="check_group" value="3"/><label>3</label>
+       
+
+        </fieldset>
+
+        <fieldset>
+            <legend>radio</legend>
+            <input type="radio" name="radio_group" checked /><label>1</label>
+            <input type="radio" name="radio_group" /><label>2</label>
+            <input type="radio" name="radio_group" /><label>3</label>
+
+        </fieldset>
+        <button type="submit">제출</button>
+    </form>
+    <br />
+
+    <!--* select-->
+    <!--주어니 옵션 중에서 특정한 하나 혹은 그 이상을 선택-->
+    <!-- option 요소로 선택할 수 있는 옵션을 지정 -->
+    <!--* 옵션 그룹 요소로 옵션 요소들을 그룹화 할 수 있다.-->
+
+    <!--*select요소에 작성 -->
+    <!--name: form제출시 해당 name으로 value전송--  해야함 -->
+    <!--multipe: 해당 select를 여러개의 option선택 가능하게 함-->
+    <!--size: 한번에 보여지는 옵션의 갯수를 지정-->
+    
+
+    <!--*option요소에 작성-->
+    <!--value:option 의 값을 지정, -->
+    <!--selceted:해당 옵션을 선택된 상태로 지정-->
+    <!--disabled:해당 옵션을 선택하지 못하는 상태로 지정-->
+
+    <form>
+    <fieldset>
+        <legend>select</legend>
+        <select name="fruis" multiple size="2">
+            <optgroup label="라벨1">
+                <option value="apple">사과</option>
+                <option value="banana">바나나</option>
+            </optgroup>
+            <optgroup label="라벨2">
+                <option value="carrot" selected >당근</option>
+                <option value="tomato">토마토</option>
+                <option value="strwawberry" disabled>딸기</option>
+        </optgroup>
+        </select>
+        
+    </fieldset>
+    <button type="submit">제출</button>
+    </form>
+    <br />
+
+    <!--*number, range 속성-->
+    <!--숫자를 다루는 속성-->
+    <!--number는 숫자를 직접 입력하거나 스핀으로 조작-->
+    <!--range는 드래그로 조작 -->
+
+    <!--min : 최소값 지정-->
+    <!--max : 최대값 지정-->
+    <!-- step: 증감량 지정-->
+    <!--value : 기본값지정-->
+    <form>
+    <input type="number" name="number" min="0" max="10" step="2" value="2" />
+    <input type="range" name="range" min="-10" max="10" step="2" value="0" />
+    <button>제출</button>
+    </form>
+    <br />
+    <!--* file & hidden-->
+    <!--file 타입은 파일을 입력할 때 사용하고 -->
+    <!--hidden타입은 화면에 보여주지 않고자 할 때 사용-->
+    <form enctype="multipart/form-data">
+        <input type="file" name="file"/>
+        <input type="hidden" name = "hidden" value="hidden"/>
+        <button type="submit">제출</button>
+    </form>
+
+</body>
+</html>
