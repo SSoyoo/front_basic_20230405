@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-box</title>
+    <style>
+        *{
+            margin: 0;
+        }
+       .span-1{
+            display: block;
+            background-color: aquamarine;
+            width: 100px;
+            height: 100px;
+            border: 5px black solid;
+            padding: 10px;
+            margin: 10px;
+        }.span-2{
+            display: block;
+            background-color:thistle;
+            width: 100px;
+            height: 100px;
+        
+        }
+
+        .div-1{
+            display: inline;
+        }
+        .div-2{
+            display: block;
+        }
+
+        .div-3{
+            background-color: grey;
+            display: flex;
+            height: 300px;
+
+            align-items: center;
+            flex-direction: column
+        }
+    </style>
+</head>
+<body>
+    <span class="span-1">Content1</span>
+    <span class="span-2">Content2</span>
+
+    <div class="div-1">div1 inline</div>
+    <div Class="div-2">div2 block</div>
+    
+    <div Class="div-3" >
+        <div class="span-1" style="flex: 1">Content1</div>
+        <div class="span-1" style="flex: 1">Content2</div>
+        <div class="span-1" style="flex: 1">Content3</div>
+        <div class="span-1" style="flex: 1">Content4</div>
+    </div>
+
+</body>
+</html>

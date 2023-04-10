@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css - selector</title>
+    <style>
+        /**css 선택자**/
+        /*스타일 속성을 적용할 대상을 선택하는 것*/
+        /*1. 전체선택자 (*) */
+        /* 모든 html요소에 대해서 해당 스타일 스타일 적용하기 위한 선택자*/
+        *{
+            margin: 0;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        /* 타입 선택자*/
+        /* 특정한 요소에 대해 스타일을 적용하기 위한 선택자(요소명)*/
+
+        h1{
+            color: cadetblue;
+        }
+
+        h2{
+            color: navy;
+        }
+
+        p{
+            color: dimgrey;
+        }
+
+        /*클래스 선택자*/
+        /*특정 클래스에 대한 스타일을 적용하기 위한 선택자*/
+        /* (.클래스명) */
+
+        .title{
+            font-size: 20px !important;
+            font-weight: 700;
+
+        }
+        
+        .sub-titie{
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        /*id선택자*/
+        /*특정 아이디에 대한 스타일을 적용하기 위한 선택자*/
+       /* (#id명) */ 
+
+       #h1-sub-title1{
+        color: black;
+        font-size: 15px;
+       }
+
+       /* 그룹 선택자 */
+       /* 같은 스타일을 사용하는 선택자들을 나열하는 방법 */
+       /* (,) */
+
+       .class-1,.class-2,.class-3, .class-4{
+        color: aliceblue;
+        background-color: rgba(0,0,0,0.4);
+       } 
+
+       .div-h1{
+        font-size: 10px;
+        color: blueviolet;
+        text-align: center;
+       }
+
+    </style>
+</head>
+<body>
+ 
+   <div class="div-h1">
+    <h1 class="titie">h1 제목태그입니다2</h1>
+    <h1 class="sub-titie">h1 부제목태그입니다2</h1>
+    <p>전부 중앙정렬된단다</p>
+    <p>시간아깝다진짜</p>
+   </div>
+
+   
+    <h1 class="titie">h1 제목입니다2</h1>
+    <h1 id="h1-sub-title1" class="sub-titie">h1 부제목입니다2</h1>
+    
+    <h2 class="titie">h2 제목태그입니다2</h2>
+    <h2 class="sub-titie">h2 주제목태그입니다2</h2>
+    <h2 class="titie">h2 제목태그입니다2</h2>
+    <h2 class="sub-titie">h2 주제목태그입니다2</h2>
+
+
+    <p class = "class-1">p태그입니다</p>
+    <p class = "class-2">p태그입니다2</p>
+    <p class = "class-3">p태그입니다3</p> 
+    <p class = "class-4">p태그입니다4</p> 
+
+
+
+
+</body>
+</html>
