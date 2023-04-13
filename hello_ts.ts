@@ -58,3 +58,12 @@ interface Object4 {
 }
 const object4 : Object3 & Object4 = {
     prop1:'프로프1', prop2:2, prop3:'프로프3', prop4:4};
+
+//4. enum
+enum Fruits{
+    APPLE='사과',
+    BANANA = '바나나',
+    MELON = '메론'
+}
+
+const fruits: Fruits = Fruits.APPLE;
